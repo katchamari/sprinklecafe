@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+body {
+  font-family: Roboto; }
+  body header {
+    background: url("../imgs/headercupcake.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-position: center 75%;
+    height: 30vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 2%; }
+    body header div img.logo {
+      width: 100%; }
+    body header div.logocontainer {
+      flex: 25%; }
+    body header div.icons {
+      flex: 75%;
+      text-align: right; }
+      body header div.icons i {
+        display: inline;
+        font-size: 6vw;
+        color: #62998F;
+        padding-right: 10px; }
+  body .navbar {
+    font-size: 18px;
+    background-color: #62998F;
+    padding-top: 50px;
+    position: relative;
+    width: 100%;
+    -webkit-box-shadow: 0px 15px 16px 5px rgba(165, 99, 129, 0.71);
+    -moz-box-shadow: 0px 15px 16px 5px rgba(165, 99, 129, 0.71);
+    box-shadow: 0px 15px 16px 5px rgba(165, 99, 129, 0.71); }
+    body .navbar .navbar-toggle {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      cursor: pointer;
+      color: #FFF;
+      font-size: 20px; }
+    body .navbar .main-nav {
+      list-style-type: none;
+      display: none;
+      padding-bottom: 20px; }
+      body .navbar .main-nav.active {
+        display: block; }
+      body .navbar .main-nav li {
+        text-align: center;
+        padding: 5px 0; }
+        body .navbar .main-nav li a {
+          text-decoration: none;
+          color: #FFF; }
+  body main {
+    background-color: #F4BAD2;
+    height: 50vh; }

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/3ea0ad5351.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="logocontainer">
+            <img class="logo" src="imgs/logo.svg" alt="sprinkle logo">
+        </div>
+
+        <div class="icons">
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-instagram-square"></i>
+            <i class="fab fa-twitter-square"></i>
+        </div>
+    </header>
+
+    <nav class="navbar">
+
+        <span class="navbar-toggle" id="js-navbar-toggle">
+            <i class="fas fa-bars"></i>
+        </span>
+
+        <ul class="main-nav" id="js-menu">
+            <li>
+                <a href="#" class="nav-links">Home</a>
+            </li>
+            <li>
+                <a href="#" class="nav-links">Products</a>
+            </li>
+            <li>
+                <a href="#" class="nav-links">About Us</a>
+            </li>
+            <li>
+                <a href="#" class="nav-links">Contact Us</a>
+            </li>
+            <li>
+                <a href="#" class="nav-links">Blog</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+
+    </main>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script>
+        // let mainNav = document.getElementById('js-menu');
+        // let navBarToggle = document.getElementById('js-navbar-toggle');
+
+        // navBarToggle.addEventListener('click', function () {
+
+        //     mainNav.classList.toggle('active');
+        // });
+
+        $('#js-navbar-toggle').on('click', function () {
+            $("#js-menu").slideToggle(500, 'swing');
+           
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+*{
+    box-sizing:border-box;
+    padding:0;
+    margin:0;
+}
+
+$font: Roboto;
+$green:#62998F;
+$white:#FFF;
+$pink: #F4BAD2;
+
+@mixin background--image{
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+@mixin navbar--dropshadow{
+    -webkit-box-shadow: 0px 15px 16px 5px rgba(165,99,129,0.71);
+-moz-box-shadow: 0px 15px 16px 5px rgba(165,99,129,0.71);
+box-shadow: 0px 15px 16px 5px rgba(165,99,129,0.71);
+}
+
+body{
+    font-family:$font;
+
+    header{
+
+        background:url("../imgs/headercupcake.jpg");
+        @include background--image;
+        width:100%;
+        background-position:center 75%;
+        height:30vh;
+        display:flex;
+        justify-content:space-between;
+        padding:2%;
+
+        div img.logo{
+            width:100%;
+        }
+
+        div.logocontainer{
+            flex:25%;
+        }
+    
+        div.icons{
+            flex:75%;
+            text-align:right;
+
+            i{
+                display:inline;
+                font-size:6vw;
+                color:$green;
+                padding-right:10px;
+            }
+
+            
+        }
+
+        
+    
+    }
+
+    .navbar {
+        font-size: 18px;
+        background-color:$green;
+        padding-top:50px;
+        position:relative;
+        width:100%;
+        @include navbar--dropshadow();
+    
+        .navbar-toggle {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer; 
+            color:$white;
+            font-size: 20px;
+        }
+    
+        .main-nav {
+            list-style-type: none;
+            display:none;
+            padding-bottom:20px;
+
+            &.active{
+                display:block;
+            }
+    
+            li {
+                text-align: center;
+                padding: 5px 0;
+    
+                a{
+                    text-decoration:none;
+                    color:$white;
+                }
+            }
+        }
+    }
+
+
+    main{
+        background-color:$pink;
+        height:50vh;
+    }
+}
+
+
+
+
