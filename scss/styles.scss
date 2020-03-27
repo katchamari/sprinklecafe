@@ -222,7 +222,11 @@ body{
 
         &#story{
             text-align:center;
-            padding:100px;
+            padding:50px 20px;
+
+            @media only screen and (min-width:768px){
+                padding:100px 20px;
+            }
         }
 
         div.half-flex{
