@@ -19,9 +19,9 @@ $normal:400;
 }  
 
 @mixin navbar--dropshadow{
-    -webkit-box-shadow: 0px 15px 16px 5px rgba(165,99,129,0.71);
--moz-box-shadow: 0px 15px 16px 5px rgba(165,99,129,0.71);
-box-shadow: 0px 15px 16px 5px rgba(165,99,129,0.71);
+    -webkit-box-shadow: 0px 15px 15px 0px rgba(165,99,129,0.71);
+-moz-box-shadow: 0px 15px 15px 0px rgba(165,99,129,0.71);
+box-shadow: 0px 15px 15px 0px rgba(165,99,129,0.71);
 }
 
 @mixin background--parallax{
@@ -32,10 +32,27 @@ box-shadow: 0px 15px 16px 5px rgba(165,99,129,0.71);
     background-size: cover;
 }
 
+@mixin background--parallax--large{
+    height:500px;
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 body{
     font-family:$font;
     font-weight:$normal;
     color:$white;
+
+
+    @media only screen and (min-width:600px){
+        font-size:1.5rem;
+    }
+
+    @media only screen and (min-width:1024px){
+        font-size:2rem;
+    }
 
     a{
         text-decoration:none;
@@ -52,8 +69,20 @@ body{
         justify-content:space-between;
         padding:2%;
 
+        @media only screen and (min-width:600px){
+            height:40vh;
+        }
+
+        @media only screen and (min-width:1024px){
+            background-position:50%;
+        }
+
         div img.logo{
             width:100%;
+
+            @media only screen and (min-width:600px){
+                width:150px;
+            }
         }
 
         div.logocontainer{
@@ -69,6 +98,10 @@ body{
                 font-size:6vw;
                 color:$green;
                 padding-right:10px;
+
+                @media only screen and (min-width:600px){
+                   font-size: 40px;
+                }
             }
 
             
@@ -85,6 +118,14 @@ body{
         position:relative;
         width:100%;
         @include navbar--dropshadow();
+
+        @media screen and (min-width:768px){
+            display:flex;
+            justify-content:center;
+            padding-bottom:0;
+            align-items:center;
+            padding-top:0;
+        }
     
         .navbar-toggle {
             position: absolute;
@@ -93,12 +134,25 @@ body{
             cursor: pointer; 
             color:$greenlight;
             font-size: 20px;
+            
+            @media only screen and (min-width:768px){
+                display:none;
+            }
         }
     
         .main-nav {
             list-style-type: none;
             display:none;
             padding-bottom:20px;
+
+            @media only screen and (min-width:768px){
+                display:flex;
+                flex:15%;
+                flex-direction:row;
+                justify-content:space-around;
+                padding-bottom:0;
+                padding:10px;
+            }
 
             &.active{
                 display:block;
@@ -107,9 +161,20 @@ body{
             li {
                 text-align: center;
                 padding: 5px 0;
+                text-transform:lowercase;
+
+                @media only screen and (min-width:768px){
+                    margin:0;
+                    font-size:1.5rem;
+                }
     
                 a{
                     color:$white;
+
+                    &:hover{
+                        color:$greenlight;
+                    }
+
                 }
             }
         }
@@ -120,16 +185,109 @@ body{
         padding:40px 20px;
         text-align:center;
 
-        &:first-of-type{
-            padding-top:50px;
+        @media only screen and (min-width:1024px){
+            text-align:left;
         }
 
-        img{
-            width:100%;
-            height:200px;
-            object-fit: cover;
-            margin-top:20px;
+        &:first-of-type{
+            padding-top:50px; 
         }
+
+        
+
+        &#about{
+            
+            article.text-flex{
+                @media only screen and (min-width:1024px){
+                    width:800px;
+                }
+            }
+        }
+
+        &#contact {
+
+            article.text-flex{
+                @media only screen and (min-width:1024px){
+                    order:2;
+                }
+            }
+
+            article.img-flex{
+                @media only screen and (min-width:1024px){
+                    order:1;
+                }
+            }
+
+        }
+
+        &#story{
+            text-align:center;
+            padding:100px;
+        }
+
+        div.half-flex{
+
+            max-width:1200px;
+            margin:auto;
+
+            article.text-flex{
+                // flex:40%;
+                padding:5%;
+            }
+    
+            article.img-flex{
+                // flex:40%;
+                padding:5%;
+    
+                .polaroid{
+                    @media only screen and (min-width:1024px){
+                        background-color:$white;
+                    padding:20px 20px 60px 20px;
+                    height:380px;
+                    width:340px;
+                    // margin-left:auto;
+                    // margin-right:0;
+                    }
+    
+                    img{
+                        width:100%;
+                        height:200px;
+                        object-fit: cover; 
+                        margin-top:20px;
+                        
+                        &.cake{
+                            object-position: center 20%;
+                        }
+            
+                        &.cafe{
+                            object-position:center 70%;
+                        }
+            
+                        @media only screen and (min-width:500px){
+                            height:350px;
+                            
+                        }
+    
+                        @media only screen and (min-width:1024px){
+                            width:300px;
+                            height:300px;
+                            margin-top:0;
+                        }
+                    }
+    
+                }
+            }
+           
+            @media only screen and (min-width:1024px){
+                display:flex;
+                justify-content:center;
+             }
+            
+        }
+
+        
+
+        
 
         h2{
             font-weight:$bold;
@@ -141,6 +299,9 @@ body{
             font-size:5vw;
             padding-right:5px;
 
+            @media only screen and (min-width:600px){
+                font-size:40px;
+            }
         }
 
         address{
@@ -156,11 +317,19 @@ body{
     #parallax-1{
         background:url("../imgs/parallax-1.jpg");
         @include background--parallax();
+
+        @media only screen and (min-width:1024px){
+            @include background--parallax--large();
+        }
     }
 
     #parallax-2{
         background:url("../imgs/parallax-2.jpg");
         @include background--parallax();
+
+        @media only screen and (min-width:1024px){
+            @include background--parallax--large();
+        }
     }
 
 
@@ -168,11 +337,16 @@ body{
         background-color:$green;
         display:flex;
         justify-content:space-between;
-        height:100px;
+        min-height:100px;
         padding:10px;
+
+        @media only screen and (min-width:600px){
+            min-height:200px;
+        }
 
         .footer-right{
             flex:10%;
+            align-self:center;
         }
     
         .footer-left{
@@ -182,6 +356,10 @@ body{
 
             img.logo{
                 width:70%;
+
+                @media only screen and (min-width:600px){
+                    width:200px;
+                }
                 
             }
     
@@ -192,7 +370,13 @@ body{
             text-align:right;
             font-size:20px;
             padding-bottom:7px;
+
+            @media only screen and (min-width:600px){
+                font-size:40px;
+            }
         }
+
+
 
         .fa, .fab, .fad, .fal, .far, .fas{
             display:block;
