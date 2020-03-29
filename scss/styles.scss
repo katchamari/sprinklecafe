@@ -144,6 +144,7 @@ body{
             list-style-type: none;
             display:none;
             padding-bottom:20px;
+            max-width:1200px;
 
             @media only screen and (min-width:768px){
                 display:flex;
@@ -334,6 +335,17 @@ body{
         @media only screen and (min-width:1024px){
             @include background--parallax--large();
         }
+        
+    }
+
+    #parallax-3{
+        background:url("../imgs/parallax-3.jpg");
+        @include background--parallax();
+
+        @media only screen and (min-width:1024px){
+            @include background--parallax--large();
+        }
+
     }
 
 
