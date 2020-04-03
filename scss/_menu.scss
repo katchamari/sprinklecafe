@@ -1,0 +1,68 @@
+
+@mixin dotted--line{
+    border-top:5px dotted $pinkdark;
+    flex:1;
+    top:5px;
+    position:relative;
+    margin:0 10px;
+}
+
+section#menu{
+
+    padding-left:0;
+    padding-right:0;
+
+
+
+    .menu-container{
+        background-color:$pinklight;
+        width:90%;
+        margin:auto;
+        border-radius:15px;
+        padding:20px;
+        position:relative;
+
+        h2{
+            position:absolute;
+            top:-30px;
+            font-size:40px;
+            width:100%;
+            text-align:center;
+            left:0;
+        }
+
+        h3{
+            color:$pinkdark;
+            font-size:25px;
+            margin-bottom:10px;
+        }
+
+
+        .menu-content{
+            display:flex;
+            flex-wrap:wrap;
+            color:$pinkdark;
+            margin-bottom:10px;
+
+            div:first-of-type{
+                @include dotted--line;
+            }
+
+            div:nth-of-type(2){
+
+                display:flex;
+                flex:100%;
+
+                div{
+                    @include dotted--line;
+                }
+            }
+
+            p.subtext{
+                flex:100%;
+            }
+        }
+    }
+    
+
+}

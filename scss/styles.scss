@@ -10,8 +10,12 @@ $green:#62998F;
 $greenlight: #9AD8CC; 
 $white:#FFF;
 $pink: #F4BAD2;
+$pinklight:#FFE1EF;
+$pinkdark:#A86081;
 $bold: 900;
 $normal:400;
+
+@import "menu";
 
 @mixin background--image{
     background-repeat:no-repeat;

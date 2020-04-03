@@ -3,6 +3,50 @@
   padding: 0;
   margin: 0; }
 
+section#menu {
+  padding-left: 0;
+  padding-right: 0; }
+  section#menu .menu-container {
+    background-color: #FFE1EF;
+    width: 90%;
+    margin: auto;
+    border-radius: 15px;
+    padding: 20px;
+    position: relative; }
+    section#menu .menu-container h2 {
+      position: absolute;
+      top: -30px;
+      font-size: 40px;
+      width: 100%;
+      text-align: center;
+      left: 0; }
+    section#menu .menu-container h3 {
+      color: #A86081;
+      font-size: 25px;
+      margin-bottom: 10px; }
+    section#menu .menu-container .menu-content {
+      display: flex;
+      flex-wrap: wrap;
+      color: #A86081;
+      margin-bottom: 10px; }
+      section#menu .menu-container .menu-content div:first-of-type {
+        border-top: 5px dotted #A86081;
+        flex: 1;
+        top: 5px;
+        position: relative;
+        margin: 0 10px; }
+      section#menu .menu-container .menu-content div:nth-of-type(2) {
+        display: flex;
+        flex: 100%; }
+        section#menu .menu-container .menu-content div:nth-of-type(2) div {
+          border-top: 5px dotted #A86081;
+          flex: 1;
+          top: 5px;
+          position: relative;
+          margin: 0 10px; }
+      section#menu .menu-container .menu-content p.subtext {
+        flex: 100%; }
+
 body {
   font-family: Roboto;
   font-weight: 400;
