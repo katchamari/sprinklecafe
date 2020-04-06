@@ -2,7 +2,7 @@
 @mixin dotted--line{
     border-top:5px dotted $pinkdark;
     flex:1;
-    top:5px;
+    top:8px;
     position:relative;
     margin:0 10px;
 }
@@ -11,6 +11,7 @@ section#menu{
 
     padding-left:0;
     padding-right:0;
+    padding-top:80px;
 
 
 
@@ -21,6 +22,24 @@ section#menu{
         border-radius:15px;
         padding:20px;
         position:relative;
+        max-width:1200px;
+
+        @media only screen and (min-width:1024px){
+            display:flex;
+            justify-content:space-between;
+        }
+
+        .menu-left{
+            @media only screen and (min-width:1024px){
+                width:40%;
+            }
+        }
+
+        .menu-right{
+            @media only screen and (min-width:1024px){
+                width: 50%;
+            }
+        }
 
         h2{
             position:absolute;
@@ -29,12 +48,21 @@ section#menu{
             width:100%;
             text-align:center;
             left:0;
+
+            @media only screen and (min-width:1024px){
+                font-size:4rem;
+                top:-50px;
+            }
         }
 
         h3{
             color:$pinkdark;
             font-size:25px;
             margin-bottom:10px;
+
+            @media only screen and (min-width:1024px){
+                font-size:2.5rem;
+            }
         }
 
 
