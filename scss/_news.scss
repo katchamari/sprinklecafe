@@ -1,0 +1,129 @@
+#news{
+
+    div.news-container{
+
+        max-width:1200px;
+        margin:auto;
+
+        @media only screen and (min-width:768px){
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+        }
+
+
+        article{
+            width:90%;
+            background:$pinklight;
+            border-radius:15px;
+            margin:0 auto 50px auto;
+            text-align:left;
+            max-width:500px;
+
+            @media only screen and (min-width:768px){
+                width:35%;
+                margin:0 10% 50px 0;
+                max-width:none;
+
+            }
+
+            @media only screen and (min-width:1024px){
+                width:30%;
+            }
+
+            &:nth-of-type(even){
+                @media only screen and (min-width:768px){
+                    margin-right:0;
+                }
+            }
+
+            &:nth-of-type(n + 1){
+                @media only screen and (min-width:1024px){
+                    margin-right:4.5%;
+                }
+            }
+
+            &:last-of-type{
+                @media only screen and (min-width:1024px){
+                    margin-right:0;
+                }
+            }
+
+           
+
+            &:first-of-type{
+                @media only screen and (min-width:1024px){
+                    width:100%;
+                    margin-right:0;
+
+                    display:flex;
+                }
+
+                img{
+                    @media only screen and (min-width:1024px){
+                        width:40%;
+                        border-radius: 15px 0 0 15px;
+                    }
+                }
+            }
+    
+            img{
+                width:100%;
+                height: 150px;
+                object-fit:cover;
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+    
+                @media only screen and (min-width:600px){
+                    height:200px;
+                }
+            }
+    
+            div.news-text{
+                padding:10px;
+
+    
+    
+                h4.title{
+                    color:$green;
+                    font-size:20px;
+                    
+                    @media only screen and (min-width:1024px){
+                        font-size:30px;
+                    }
+                }
+    
+                h5.date{
+                    color:$green;
+                    font-size:16px;
+                    margin-bottom:5px;
+
+                    @media only screen and (min-width:1024px){
+                        font-size:26px;
+                    }
+                }
+    
+                p{
+                    color:$pinkdark;
+                    font-size:14px;
+
+                    @media only screen and (min-width:1024px){
+                        font-size:20px;
+                    }
+                }
+    
+                a{
+                    color:$pinkdark;
+                    text-decoration:underline;
+                    font-weight:900;
+                    font-size:14px;
+
+                    @media only screen and (min-width:1024px){
+                        font-size:20px;
+                    }
+    
+                }
+            }
+        }
+    }
+}

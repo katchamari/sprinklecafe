@@ -16,6 +16,7 @@ $bold: 900;
 $normal:400;
 
 @import "menu";
+@import "news";
 
 @mixin background--image{
     background-repeat:no-repeat;
@@ -344,6 +345,16 @@ body{
 
     #parallax-3{
         background:url("../imgs/parallax-3.jpg");
+        @include background--parallax();
+
+        @media only screen and (min-width:1024px){
+            @include background--parallax--large();
+        }
+
+    }
+
+    #parallax-4{
+        background:url("../imgs/parallax-4.jpg");
         @include background--parallax();
 
         @media only screen and (min-width:1024px){
