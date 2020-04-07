@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sprinkle - news</title>
+    <title>sprinkle - catering</title>
     <script src="https://kit.fontawesome.com/3ea0ad5351.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
@@ -48,50 +48,60 @@
 
     <main>
 
-        <section id="news">
-            <div class="news-container">
-                <article>
-                   <img src="imgs/news1.jpg" class="news-img">
-                   <div class="news-text">
-                        <h4 class="title">sprinkle awarded #1 cafe in sacramento</h4>
-                        <h5 class="date">03/01/2020</h5>
-                        <p class="desc">reporters from the sacramento bee gave sprinkle cafe a visit and were completely enamored with our environment and, most importantly, our food. here's what they had to say about us</p>
-                        <a class="readmore" href="#">read more</a>
-                   </div> 
-                </article>
+        <section id="catering">
+            <div class="catering-container">
 
+                <h2>catering</h2>
 
-                <article>
-                    <img src="imgs/news2.jpg" class="news-img">
-                   <div class="news-text">
-                        <h4 class="title">macaron workshop</h4>
-                        <h5 class="date">12/13/2019</h5>
-                        <p class="desc">have you ever wanted to learn to bake one of the most delicate desserts in the culinary world? now you can!</p>
-                        <a class="readmore" href="#">read more</a>
-                   </div> 
-                </article>
+                <p>provide us with your information and what you'd like made and we will contact you as soon as possible
+                    to get the details together</p>
 
+                <form>
+                    <div>
+                        <label for="firstname">first name</label>
+                        <input type="text" id="firstname" name="firstname" required placeholder="john">
+                    </div>
 
-                <article>
-                    <img src="imgs/news3.jpg" class="news-img">
-                   <div class="news-text">
-                        <h4 class="title">enjoy a free donut</h4>
-                        <h5 class="date">06/06/2019</h5>
-                        <p class="desc">in honor of international donut day, come in and receive a free donut of your choice!</p>
-                        <a class="readmore" href="#">read more</a>
-                   </div> 
-                </article>
+                    <div>
+                        <label for="lastname">last name</label>
+                        <input type="text" id="lastname" name="lastname" required placeholder="smith">
+                    </div>
 
+                    <div>
+                        <label for="phonenumber">phone number</label>
+                        <input type="text" id="phonenumber" name="phonenumber" required placeholder="(916) 123-4567">
+                    </div>
 
-                <article>
-                    <img src="imgs/news4.jpg" class="news-img">
-                   <div class="news-text">
-                        <h4 class="title">cake decorating contest</h4>
-                        <h5 class="date">05/20/2019</h5>
-                        <p class="desc">win a $300 gift card to sprinkle by entering this cake decorating contest!</p>
-                        <a class="readmore" href="#">read more</a>
-                   </div> 
-                </article>
+                    <div>
+                        <label for="email">email</label>
+                        <input type="email" id="email" name="email" required placeholder="johnsmith90@gmail.com">
+                    </div>
+
+                    <div>
+                        <label for="order">what are you ordering today?</label>
+                        <select class="select-css" name="order" required>
+                            <option value="">--please choose an option--</option>
+                            <option value="macarons">macarons</option>
+                            <option value="donuts">donuts</option>
+                            <option value="cookies">cookies</option>
+                            <option value="cupcakes">cupcakes</option>
+                            <option value="cake">cake</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="quantity">quantity</label>
+                        <input type="number" id="quantity" name="quantity" required>
+                    </div>
+
+                    <div>
+                        <label for="details">details for decoration</label>
+                        <textarea rows="10" id="details" required
+                            placeholder="tell us how you want your dessert to look and taste; we'll ask further questions when we call you!"></textarea>
+                    </div>
+
+                    <input type="submit" value="submit">
+                </form>
             </div>
         </section>
 

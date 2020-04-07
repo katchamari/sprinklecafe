@@ -1,0 +1,132 @@
+section#catering{
+
+    .catering-container{
+
+        max-width:1200px;
+        margin:auto;
+        padding-bottom:50px;
+
+        p{
+            margin-bottom:20px;
+        }
+
+        form{
+
+            @media only screen and (min-width:768px){
+                display:flex;
+                flex-wrap:wrap;
+                text-align:left;
+            }
+
+            div{
+
+                @media only screen and (min-width:768px){
+                    width:45%;
+                
+                }
+
+                &:nth-of-type(odd){
+                    @media only screen and (min-width:768px){
+                        margin-right:10%;
+                    }
+                }
+
+                &:last-of-type{
+                    @media only screen and (min-width:768px){
+                        width:100%;
+                        margin-right:0;
+                    }
+                }
+
+                select.select-css{
+                    background:$pinklight;
+                    margin-bottom:20px;
+                    color:$greylight;
+                    width:90%;
+                    padding:5px;
+
+                    @media only screen and (min-width:768px){
+                        width:100%;
+                    }
+
+                    @media only screen and (min-width:1024px){
+                        font-size:1.2rem;
+                    }
+    
+                }
+                
+                label{
+                    display:block;
+                    color:$green;
+                    font-weight:$bold;
+                }
+    
+                input{
+                    display:block;
+                    width:90%;
+                    margin:auto;
+                    background-color:$pinklight;
+                    margin-bottom:20px;
+                    padding:5px;
+                    font-family:$font;
+                    color:$greylight;
+
+                    @media only screen and (min-width:768px){
+                        width:100%
+                    }
+
+                    @media only screen and (min-width:1024px){
+                        font-size:1.2rem;
+                    }
+    
+                }
+    
+                ::-webkit-input-placeholder { /* Edge */
+                    color: $greylight;
+                  }
+                  
+                  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+                    color: $greylight;
+                  }
+                  
+                  ::placeholder {
+                    color: $greylight;
+                  }
+    
+                textarea{
+                    width:90%;
+                    background-color:$pinklight;
+                    padding:5px;
+                    margin-bottom:20px;
+
+                    @media only screen and (min-width:768px){
+                        width:100%;
+                    }
+
+                    @media only screen and (min-width:1024px){
+                        font-size:1.2rem;
+                    }
+                }
+    
+    
+    
+            }
+
+            input[type="submit"]{
+                background-color:$green;
+                color:$white;
+                font-weight:$bold;
+                font-family:$font;
+                padding:10px;
+                width:100%;
+                font-size:20px;
+                margin:auto;
+
+                @media only screen and (min-width:1024px){
+                    font-size:1.5rem;
+                }
+            }
+        }
+    }
+
+}

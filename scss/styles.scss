@@ -12,10 +12,12 @@ $white:#FFF;
 $pink: #F4BAD2;
 $pinklight:#FFE1EF;
 $pinkdark:#A86081;
+$greylight:#72676D;
 $bold: 900;
 $normal:400;
 
 @import "menu";
+@import "catering";
 @import "news";
 
 @mixin background--image{
